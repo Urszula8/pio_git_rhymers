@@ -1,5 +1,5 @@
 package edu.kis.vh.nursery.list;
-
+/**This data structure contains integer values**/
 public class IntLinkedList {
     private static class Node {
 
@@ -15,7 +15,7 @@ public class IntLinkedList {
     public static final int LIST_IS_EMPTY_VALUE = -1;
     Node last;
     int i;
-
+/**Adds number to the end of the list**/
     public void push(int i) {
         if (last == null)
             last = new Node(i);
@@ -29,17 +29,17 @@ public class IntLinkedList {
     public boolean isEmpty() {
         return last == null;
     }
-
+/**Returns false if the list is not full**/
     public boolean isFull() {
         return false;
     }
-
+/**Returns value of the last element of the list. If the list is empty, returns -1**/
     public int top() {
         if (isEmpty())
             return LIST_IS_EMPTY_VALUE;
         return last.value;
     }
-
+/**deletes last element of the list and returns its value. If list is empty, returns -1**/
     public int pop() {
         if (isEmpty())
             return LIST_IS_EMPTY_VALUE;
